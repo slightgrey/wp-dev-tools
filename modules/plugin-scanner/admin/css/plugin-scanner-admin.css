@@ -1,0 +1,334 @@
+/* ==========================================================================
+   WP Plugin Scanner — Admin Styles (shadcn/ui aesthetic)
+   ========================================================================== */
+
+.wps-wrap {
+	--wps-radius: 0.5rem;
+	--wps-border: #e4e4e7;
+	--wps-muted: #f4f4f5;
+	--wps-muted-fg: #71717a;
+	--wps-foreground: #09090b;
+	--wps-background: #ffffff;
+	--wps-primary: #18181b;
+	--wps-primary-fg: #ffffff;
+	--wps-ring: #a1a1aa;
+	--wps-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.07), 0 1px 2px -1px rgb(0 0 0 / 0.07);
+
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	color: var(--wps-foreground);
+	margin-top: 20px;
+}
+
+/* Card */
+.wps-card {
+	background: var(--wps-background);
+	border: 1px solid var(--wps-border);
+	border-radius: var(--wps-radius);
+	box-shadow: var(--wps-shadow);
+	overflow: hidden;
+}
+
+.wps-card-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 24px 28px;
+	border-bottom: 1px solid var(--wps-border);
+}
+
+.wps-title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--wps-foreground);
+	margin: 0 0 4px 0;
+	padding: 0;
+	line-height: 1.4;
+}
+
+.wps-description {
+	font-size: 0.875rem;
+	color: var(--wps-muted-fg);
+	margin: 0;
+	line-height: 1.5;
+}
+
+.wps-header-actions {
+	flex-shrink: 0;
+	padding-top: 2px;
+}
+
+/* Buttons */
+.wps-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1;
+	padding: 9px 16px;
+	border-radius: calc(var(--wps-radius) - 2px);
+	border: 1px solid transparent;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background 0.15s, color 0.15s, border-color 0.15s, opacity 0.15s;
+	white-space: nowrap;
+	font-family: inherit;
+}
+
+.wps-btn:focus-visible {
+	outline: 2px solid var(--wps-ring);
+	outline-offset: 2px;
+}
+
+.wps-btn-primary {
+	background: var(--wps-primary);
+	color: var(--wps-primary-fg);
+	border-color: var(--wps-primary);
+}
+
+.wps-btn-primary:hover {
+	background: #27272a;
+	border-color: #27272a;
+	color: var(--wps-primary-fg);
+}
+
+.wps-btn-primary:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.wps-btn-outline {
+	background: transparent;
+	color: var(--wps-foreground);
+	border-color: var(--wps-border);
+}
+
+.wps-btn-outline:hover {
+	background: var(--wps-muted);
+	color: var(--wps-foreground);
+	border-color: var(--wps-border);
+}
+
+/* Loading state */
+.wps-loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	padding: 60px 28px;
+}
+
+.wps-spinner {
+	width: 32px;
+	height: 32px;
+	border: 3px solid var(--wps-border);
+	border-top-color: var(--wps-primary);
+	border-radius: 50%;
+	animation: wps-spin 0.7s linear infinite;
+}
+
+@keyframes wps-spin {
+	to { transform: rotate(360deg); }
+}
+
+.wps-loading-text {
+	font-size: 0.875rem;
+	color: var(--wps-muted-fg);
+}
+
+/* Toolbar */
+.wps-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 16px 20px;
+	border-bottom: 1px solid var(--wps-border);
+	flex-wrap: wrap;
+}
+
+/* Filter tabs */
+.wps-filter-tabs {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	flex-wrap: wrap;
+}
+
+.wps-tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	padding: 6px 12px;
+	border-radius: 999px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	background: transparent;
+	color: var(--wps-muted-fg);
+	transition: background 0.12s, color 0.12s;
+	font-family: inherit;
+	line-height: 1;
+}
+
+.wps-tab:hover {
+	background: var(--wps-muted);
+	color: var(--wps-foreground);
+}
+
+.wps-tab.active {
+	background: var(--wps-primary);
+	color: var(--wps-primary-fg);
+}
+
+.wps-count {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 18px;
+	height: 18px;
+	padding: 0 5px;
+	font-size: 0.6875rem;
+	font-weight: 600;
+	border-radius: 999px;
+	background: rgb(0 0 0 / 0.08);
+}
+
+.wps-tab.active .wps-count {
+	background: rgb(255 255 255 / 0.2);
+}
+
+/* Table wrapper */
+.wps-table-wrapper {
+	overflow-x: auto;
+}
+
+.wps-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.875rem;
+}
+
+.wps-table thead tr {
+	background: var(--wps-muted);
+}
+
+.wps-table th {
+	padding: 10px 16px;
+	text-align: left;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--wps-muted-fg);
+	border-bottom: 1px solid var(--wps-border);
+	white-space: nowrap;
+}
+
+.wps-table td {
+	padding: 12px 16px;
+	border-bottom: 1px solid var(--wps-border);
+	vertical-align: middle;
+	color: var(--wps-foreground);
+}
+
+.wps-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.wps-table tbody tr:hover td {
+	background: #fafafa;
+}
+
+/* Plugin name cell */
+.wps-plugin-name {
+	font-weight: 500;
+}
+
+.wps-plugin-author {
+	font-size: 0.75rem;
+	color: var(--wps-muted-fg);
+	margin-top: 2px;
+}
+
+.wps-plugin-link {
+	font-size: 0.75rem;
+	color: #2563eb;
+	text-decoration: none;
+}
+
+.wps-plugin-link:hover {
+	text-decoration: underline;
+}
+
+/* Badges */
+.wps-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 10px;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 500;
+	line-height: 1.6;
+	white-space: nowrap;
+}
+
+.wps-badge-active {
+	background: #dcfce7;
+	color: #166534;
+}
+
+.wps-badge-inactive {
+	background: var(--wps-muted);
+	color: var(--wps-muted-fg);
+}
+
+.wps-badge-update {
+	background: #fef9c3;
+	color: #854d0e;
+}
+
+.wps-badge-premium {
+	background: #ede9fe;
+	color: #6d28d9;
+}
+
+.wps-badge-free {
+	background: #e0f2fe;
+	color: #0369a1;
+}
+
+.wps-badge-custom {
+	background: #ffedd5;
+	color: #9a3412;
+}
+
+.wps-badge-yes {
+	background: #fef9c3;
+	color: #854d0e;
+}
+
+/* Notes */
+.wps-note-delete {
+	font-size: 0.75rem;
+	color: #dc2626;
+	font-style: italic;
+}
+
+/* PHP compat */
+.wps-php-unknown {
+	color: var(--wps-muted-fg);
+	font-style: italic;
+	font-size: 0.8125rem;
+}
+
+/* Empty state */
+.wps-empty {
+	padding: 40px 28px;
+	text-align: center;
+	font-size: 0.875rem;
+	color: var(--wps-muted-fg);
+}

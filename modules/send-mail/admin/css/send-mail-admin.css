@@ -1,0 +1,260 @@
+/* ── Reset scope ────────────────────────────────────────────── */
+.smwm-wrap * {
+    box-sizing: border-box;
+}
+
+.smwm-wrap {
+    max-width: 680px;
+    margin-top: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── Page heading ───────────────────────────────────────────── */
+.smwm-wrap .smwm-heading {
+    font-size: 22px;
+    font-weight: 600;
+    color: #09090b;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.3px;
+}
+
+.smwm-wrap .smwm-subheading {
+    font-size: 13px;
+    color: #71717a;
+    margin: 0 0 24px 0;
+}
+
+/* ── Alert banner ───────────────────────────────────────────── */
+.smwm-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #713f12;
+    line-height: 1.5;
+}
+
+.smwm-alert .smwm-alert-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.smwm-alert strong {
+    font-weight: 600;
+}
+
+.smwm-alert code {
+    background: #fef9c3;
+    border: 1px solid #fde047;
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 12px;
+    font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+/* ── Success / Error notices ────────────────────────────────── */
+.smwm-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid;
+}
+
+.smwm-notice.is-success {
+    background: #f0fdf4;
+    border-color: #86efac;
+    color: #166534;
+}
+
+.smwm-notice.is-error {
+    background: #fef2f2;
+    border-color: #fca5a5;
+    color: #991b1b;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.smwm-card {
+    background: #ffffff;
+    border: 1px solid #e4e4e7;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+
+/* ── Form fields ────────────────────────────────────────────── */
+.smwm-field {
+    margin-bottom: 20px;
+}
+
+.smwm-field:last-of-type {
+    margin-bottom: 0;
+}
+
+.smwm-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #18181b;
+    margin-bottom: 6px;
+}
+
+.smwm-label .smwm-required {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+.smwm-input {
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    font-size: 13.5px;
+    color: #18181b;
+    background: #fff;
+    transition: border-color .15s, box-shadow .15s;
+    outline: none;
+    font-family: inherit;
+}
+
+.smwm-input:focus {
+    border-color: #a1a1aa;
+    box-shadow: 0 0 0 3px rgba(161,161,170,.2);
+}
+
+.smwm-input::placeholder {
+    color: #a1a1aa;
+}
+
+/* ── Format toggle (pill) ───────────────────────────────────── */
+.smwm-format-group {
+    display: inline-flex;
+    background: #f4f4f5;
+    border-radius: 8px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.smwm-format-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+.smwm-format-group input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.smwm-format-group .smwm-format-label {
+    display: block;
+    padding: 5px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #71717a;
+    transition: background .15s, color .15s, box-shadow .15s;
+    user-select: none;
+}
+
+.smwm-format-group input[type="radio"]:checked + .smwm-format-label {
+    background: #ffffff;
+    color: #18181b;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+/* ── Editors ────────────────────────────────────────────────── */
+#smwm-plain-editor textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px 12px;
+    border: 1px solid #e4e4e7;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    color: #18181b;
+    background: #fff;
+    resize: vertical;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+    line-height: 1.6;
+}
+
+#smwm-plain-editor textarea:focus {
+    border-color: #a1a1aa;
+    box-shadow: 0 0 0 3px rgba(161,161,170,.2);
+}
+
+#smwm-html-editor .wp-editor-wrap {
+    border: 1px solid #e4e4e7 !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+/* ── Divider ────────────────────────────────────────────────── */
+.smwm-divider {
+    border: none;
+    border-top: 1px solid #f4f4f5;
+    margin: 24px 0;
+}
+
+/* ── Footer / send row ──────────────────────────────────────── */
+.smwm-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.smwm-footer-meta {
+    font-size: 12px;
+    color: #a1a1aa;
+}
+
+.smwm-footer-meta span {
+    color: #71717a;
+    font-weight: 500;
+}
+
+/* ── Send button ────────────────────────────────────────────── */
+.smwm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 38px;
+    padding: 0 20px;
+    background: #18181b;
+    color: #fff !important;
+    border: none;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .15s, opacity .15s;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.smwm-btn:hover {
+    background: #27272a;
+}
+
+.smwm-btn:active {
+    opacity: .85;
+}
+
+.smwm-btn svg {
+    flex-shrink: 0;
+}

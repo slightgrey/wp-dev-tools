@@ -1,0 +1,91 @@
+/* Dev Tools — minimal overrides, Tailwind handles the rest */
+
+/* Scoped phpinfo output */
+#at-dt-phpinfo-wrap table {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 12px;
+}
+#at-dt-phpinfo-wrap td,
+#at-dt-phpinfo-wrap th {
+	padding: 4px 8px;
+	border: 1px solid #e5e7eb;
+}
+#at-dt-phpinfo-wrap h1 {
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 0 12px;
+}
+#at-dt-phpinfo-wrap h2 {
+	font-size: 13px;
+	font-weight: 600;
+	margin: 16px 0 6px;
+}
+#at-dt-phpinfo-wrap .e {
+	background: #f3f4f6;
+	font-weight: 600;
+	width: 40%;
+}
+#at-dt-phpinfo-wrap .v {
+	background: #fff;
+}
+#at-dt-phpinfo-wrap .h {
+	background: #1e40af;
+	color: #fff;
+}
+#at-dt-phpinfo-wrap img {
+	display: none;
+}
+
+/* File editor */
+.at-dt-file-editor {
+	width: 100%;
+	min-height: 480px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+	line-height: 1.6;
+	padding: 12px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	resize: vertical;
+	color: #1f2937;
+	background: #f9fafb;
+	box-sizing: border-box;
+}
+
+/* PHP testing / log output */
+#at-dt-php-output,
+#at-dt-log-content {
+	background: #1f2937;
+	color: #e5e7eb;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+	line-height: 1.6;
+	padding: 16px;
+	border-radius: 6px;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+#at-dt-php-output {
+	min-height: 100px;
+}
+#at-dt-log-content {
+	max-height: 560px;
+	overflow-y: auto;
+}
+
+/* Action button hover */
+.at-dt-action-btn:hover {
+	background: #fee2e2 !important;
+	border-color: #fca5a5 !important;
+}
+
+/* Prevent WP admin link styles bleeding into sidebar */
+.at-dt-nav-link {
+	text-decoration: none !important;
+	box-shadow: none !important;
+}
+.at-dt-nav-link:focus {
+	outline: none;
+	box-shadow: none !important;
+}

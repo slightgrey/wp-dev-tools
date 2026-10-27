@@ -1,0 +1,28 @@
+# Claude / AI assistant files
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+
+# JS dependencies
+node_modules/
+
+# PHP dependencies
+vendor/
+
+# Distribution zips
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs & env
+*.log
+.env
+.env.*
